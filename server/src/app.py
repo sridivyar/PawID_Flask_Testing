@@ -4,9 +4,11 @@ from flask import Flask, request, jsonify, render_template
 from PIL import Image
 import torch
 from torchvision import transforms, datasets
+from flask_cors import CORS
 from classes import *
 
 app = Flask(__name__)
+CORS(app)
 
 # Define the model path
 model_path = os.path.join(".", "resnet50_trained.pth")

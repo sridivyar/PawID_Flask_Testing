@@ -67,6 +67,7 @@ node_modules/
 
 #Images Folder
 Images/
+images.tar
 
 #Trained Model
 resnet50_trained.pth

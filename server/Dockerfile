@@ -2,7 +2,7 @@
 FROM python:3.8
 
 # 2
-RUN pip install Flask gunicorn Pillow torch torchvision timm
+RUN pip install Flask gunicorn Pillow torch torchvision timm flask_cors
 
 # 3
 COPY src/ /app
