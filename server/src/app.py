@@ -11,8 +11,12 @@ app = Flask(__name__)
 CORS(app)
 
 # Define the model path
-model_path = os.path.join(".", "server/src/resnet50_trained.pth")
-# model_path = os.path.join(".", "resnet50_trained.pth")
+
+#To run locally
+# model_path = os.path.join(".", "server/src/resnet50_trained.pth")
+
+#For using Docker
+model_path = os.path.join(".", "resnet50_trained.pth")
 
 # Load the trained model
 model = torch.load(model_path, map_location='cpu')
@@ -52,16 +56,6 @@ def home():
 
     else:
         return render_template('index.html', context=context)
-
-@app.route('/api')
-def api():
-    return jsonify('Testing api call')
-
-# @app.route('/upload', methods=['POST', 'GET'])
-# def upload():
-#     try:
-#         imageFile = Flask.request.files.get('imageFile', '')
-#     except Exception as err:
 
 
 if __name__ == '__main__':
