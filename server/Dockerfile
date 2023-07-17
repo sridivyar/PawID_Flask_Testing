@@ -1,8 +1,8 @@
 # 1 
-FROM python:3.8
+FROM python:3.8-slim
 
 # 2
-RUN pip install Flask gunicorn Pillow torch torchvision timm flask_cors
+RUN pip install Flask gunicorn Pillow torch --no-cache-dir torchvision timm flask_cors
 
 # 3
 COPY src/ /app

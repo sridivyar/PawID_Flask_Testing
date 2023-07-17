@@ -5,17 +5,12 @@ from PIL import Image
 import torch
 from torchvision import transforms, datasets
 from flask_cors import CORS, cross_origin
-from classes import *
+from classes import * 
 
 app = Flask(__name__)
 CORS(app)
 
 # Define the model path
-
-#To run locally
-# model_path = os.path.join(".", "server/src/resnet50_trained.pth")
-
-#For using Docker
 model_path = os.path.join(".", "resnet50_trained.pth")
 
 # Load the trained model
@@ -23,7 +18,6 @@ model = torch.load(model_path, map_location='cpu')
 model.eval()  # Set the model to evaluation mode
 
 @app.route('/', methods=['GET', 'POST'])
-# @cross_origin()
 def home():
     context = { }
     
