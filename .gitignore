@@ -71,3 +71,4 @@ images.tar
 
 #Trained Model
 resnet50_trained.pth
+efficientnet_b0_trained.pth
