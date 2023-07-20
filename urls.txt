@@ -1,0 +1,4 @@
+Cloud Run Slim URL: https://pawsitive-id-backend-2-k6kwv3hqka-uc.a.run.app
+
+Firebase URL for backend:  https://pawsitive-id-backend.web.app
+
