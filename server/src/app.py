@@ -11,7 +11,9 @@ app = Flask(__name__)
 CORS(app)
 
 # Define the model path
-model_path = os.path.join(".", "resnet50_trained.pth")
+
+# model_path = os.path.join(".", "resnet50_trained.pth")
+model_path = os.path.join(".", "efficientnet_b0_trained.pth")
 
 # Load the trained model
 model = torch.load(model_path, map_location='cpu')
