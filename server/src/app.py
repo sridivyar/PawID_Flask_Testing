@@ -37,6 +37,7 @@ def home():
         ])
 
         image = Image.open(file.stream)
+        image = image.convert("RGB")
         image = transform(image)
         image = image.unsqueeze(0)
 
