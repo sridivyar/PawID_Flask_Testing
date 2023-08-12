@@ -2,7 +2,7 @@
 FROM python:3.8-slim
 
 # 2
-RUN pip install Flask gunicorn Pillow torch --no-cache-dir torchvision timm flask_cors
+RUN pip install Flask gunicorn Pillow torch --no-cache-dir torchvision timm flask_cors tensorflow --no-cache-dir
 
 # 3
 COPY src/ /app
